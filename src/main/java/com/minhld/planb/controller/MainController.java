@@ -1,15 +1,16 @@
 package com.minhld.planb.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
-/*
- * https://www.baeldung.com/spring-controllers
- * Controller
- * - Intercepts incoming requests
- * - Converts the payload of the request to the internal structure of the data
- * - Sends the data to Model for further processing
- * - Gets processed data from the Model and advances that data to the View for rendering
- */
 @Controller
 public class MainController {
+    @GetMapping("/main")
+    public ModelAndView goMain() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("main");
+//        mv.getModel().put("name", "Welcome to Main screen");
+        return mv;
+    }
 }
