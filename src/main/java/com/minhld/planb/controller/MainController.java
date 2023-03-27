@@ -10,7 +10,6 @@ public class MainController {
     public ModelAndView goMain() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("main");
-//        mv.getModel().put("name", "Welcome to Main screen");
         return mv;
     }
 }

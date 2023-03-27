@@ -1,10 +1,17 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Plan B Website</title>
+    <title>Plan B Website</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<p>Enter Java code here<p/>
+    <div>
+        <input type="button" value="Home" onclick="goHome();">
+        <input type="button" value="React Native" onclick="goRN();">
+        <input type="button" value="DB Viewer" onclick="goDB();">
+    </div>
+    <p>This website demos the Spring capabilities<p/>
+    <p>Enter text here<p/>
+    <textarea id="codeText" name="codeText" rows="10" cols="50"></textarea>
 </body>
 </html>
