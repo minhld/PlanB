@@ -12,4 +12,25 @@ public class MainController {
         mv.setViewName("main");
         return mv;
     }
+
+    @GetMapping("/rn")
+    public ModelAndView goRN() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("rn");
+        return mv;
+    }
+
+    @GetMapping("/db")
+    public ModelAndView goDB() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("db");
+        return mv;
+    }
+
+    @GetMapping("/header")
+    public ModelAndView goHeader() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("header");
+        return mv;
+    }
 }
