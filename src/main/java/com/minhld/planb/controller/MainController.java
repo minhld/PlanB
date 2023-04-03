@@ -13,6 +13,13 @@ public class MainController {
         return mv;
     }
 
+    @GetMapping("/login")
+    public ModelAndView goLogin() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("login");
+        return mv;
+    }
+
     @GetMapping("/rn")
     public ModelAndView goRN() {
         ModelAndView mv = new ModelAndView();
