@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Plan B Website</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script th:src="@{/scripts/nav.js}"></script>
+    <style>
+        .inline {
+            display: inline-block;
+            width: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="button" value="Home" onclick="goHome();">
+    </div>
+    <div>
+        <form>
+            <div>
+                <div class="inline">Username</div><input type="text" class="inline">
+            </div>
+            <div>
+                <div class="inline">Password</div><input type="password" class="inline">
+            </div>
+            <div>
+                <input type="button" value="Login">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
