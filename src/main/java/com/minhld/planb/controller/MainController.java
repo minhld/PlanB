@@ -33,11 +33,4 @@ public class MainController {
         mv.setViewName("db");
         return mv;
     }
-
-    @GetMapping("/header")
-    public ModelAndView goHeader() {
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("header");
-        return mv;
-    }
 }
