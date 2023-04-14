@@ -14,7 +14,7 @@ public class SecurityServiceImpl implements SecurityService {
     @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
-    private UserDetailsService userDetailsService;
+    private MongoUserDetailsService userDetailsService;
 
     @Override
     public boolean login(String username, String password) {
@@ -28,4 +28,10 @@ public class SecurityServiceImpl implements SecurityService {
         }
         return false;
     }
+
+    public boolean save(String username, String password) {
+        userDetailsService.saveUser(username, password);
+        return true;
+    }
+
 }
