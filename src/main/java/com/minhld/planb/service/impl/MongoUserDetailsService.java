@@ -2,6 +2,7 @@ package com.minhld.planb.service.impl;
 
 import com.minhld.planb.data.object.User;
 import com.minhld.planb.data.repository.UserRepository;
+import com.minhld.planb.exception.LoginException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -24,9 +25,17 @@ public class MongoUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         User user = userRepository.findUserByName(userName);
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
+        if (user == null) {
+            throw new LoginException(userName);
+        }
         user.getAuthorities().forEach(role -> {
             grantedAuthorities.add(new SimpleGrantedAuthority(role.getAuthority()));
         });
         return new User(user.getUsername(), user.getPassword(), grantedAuthorities);
+    }
+
+    public UserDetails saveUser(String username, String password) {
+        // userRepository.save(new User())
+        return null;
     }
 }
