@@ -24,18 +24,13 @@ public class MongoUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         User user = userRepository.findUserByName(userName);
-        Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
         if (user == null) {
             throw new LoginException(userName);
         }
-        user.getAuthorities().forEach(role -> {
-            grantedAuthorities.add(new SimpleGrantedAuthority(role.getAuthority()));
-        });
-        return new User(user.getUsername(), user.getPassword(), grantedAuthorities);
+        return new User(user.getUsername(), user.getPassword(), user.getAuthorities());
     }
 
     public UserDetails saveUser(String username, String password) {
-        // userRepository.save(new User())
-        return null;
+        return userRepository.save(new User(username, password, null));
     }
 }
