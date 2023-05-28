@@ -19,6 +19,13 @@
 		<springfox.version>3.0.0</springfox.version>
 		<spring-boot.build-image.imageName>planb</spring-boot.build-image.imageName>
 	</properties>
+	<distributionManagement>
+		<repository>
+			<id>dev</id>
+			<name>Local repository</name>
+			<url>file://${user.home}/.m2/repository</url>
+		</repository>
+	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
