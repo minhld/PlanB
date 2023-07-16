@@ -3,7 +3,6 @@ package com.minhld.planb.controller;
 import com.minhld.planb.model.RequestUser;
 import com.minhld.planb.service.SecurityService;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -14,7 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 @SpringBootTest
-public class LoginControllerTest {
+class LoginControllerTest {
     @Mock
     SecurityService securityService;
 

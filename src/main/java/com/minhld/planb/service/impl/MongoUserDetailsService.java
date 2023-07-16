@@ -3,15 +3,10 @@ package com.minhld.planb.service.impl;
 import com.minhld.planb.data.object.User;
 import com.minhld.planb.data.repository.UserRepository;
 import com.minhld.planb.exception.LoginException;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Service
 public class MongoUserDetailsService implements UserDetailsService {

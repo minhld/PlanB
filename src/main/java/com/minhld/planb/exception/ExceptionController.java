@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ExceptionController {
     @ExceptionHandler(value = LoginException.class)
     public ResponseEntity<String> exception(LoginException e) {
-        return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
     }
 }
