@@ -10,7 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 @SpringBootTest
-public class ExceptionControllerTest {
+class ExceptionControllerTest {
     @Autowired
     ExceptionController exceptionController;
 
