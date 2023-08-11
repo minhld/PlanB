@@ -1,7 +1,9 @@
 package com.minhld.planb.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -32,5 +34,10 @@ public class MainController {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("db");
         return mv;
+    }
+
+    @PostMapping("/sendMessage")
+    public String sendMessage() {
+        return "hello";
     }
 }

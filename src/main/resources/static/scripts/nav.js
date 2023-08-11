@@ -9,3 +9,8 @@ function goRN() {
 function goDB() {
     window.location.href = 'db';
 }
+
+function sendMessage() {
+
+    alert('hi');
+}
