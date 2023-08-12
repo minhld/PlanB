@@ -11,6 +11,15 @@ function goDB() {
 }
 
 function sendMessage() {
+    $.post('/api/sendMessage', {
+            'message': 'a hello message'
+        },
+        function (data, status) {
+            alert('hi ' + data);
+        }
+    );
+}
 
-    alert('hi');
+function receiveMessage() {
+
 }

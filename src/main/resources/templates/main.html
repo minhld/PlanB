@@ -3,6 +3,7 @@
 <head>
     <title>Plan B Website</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script th:src="@{/scripts/jquery-3.7.0.min.js}"></script>
     <script th:src="@{/scripts/nav.js}"></script>
 </head>
 <body>
@@ -11,7 +12,9 @@
         <p>This website demos the Spring capabilities with Thymeleaf, MongoDB, GraphQL, and more<p/>
     </div>
     <div>
-        <input type="button" value="Submit" onclick="sendMessage();">
+        <p>Test Kafka - Hit button to send a message</p>
+        <input type="button" value="Send Message" onclick="sendMessage();">
+        <input type="button" value="Receive Message" onclick="receiveMessage();">
     </div>
 </body>
 </html>
