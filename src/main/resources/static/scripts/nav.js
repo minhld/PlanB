@@ -22,10 +22,10 @@ function sendMessage() {
             'Content-Type': 'application/json'
         },
         success: function (data) {
-            alert(data);
+            console.log(JSON.stringify(data));
         },
         error: function (request, status, error) {
-            alert('error ' + request + ' ' + status + ' ' + error);
+            console.error(status + ': ' + request.responseJSON.message);
         }
     });
 }

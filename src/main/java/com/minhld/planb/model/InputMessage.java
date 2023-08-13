@@ -11,4 +11,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class InputMessage {
     String message;
+    String date;
 }
