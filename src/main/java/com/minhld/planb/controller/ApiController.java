@@ -12,6 +12,6 @@ public class ApiController {
     @PostMapping(value = "/api/sendMessage",
             consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<String> sendMessage(@RequestBody InputMessage inputMessage) {
-        return ResponseEntity.ok("hello");
+        return ResponseEntity.ok(inputMessage.getMessage());
     }
 }
