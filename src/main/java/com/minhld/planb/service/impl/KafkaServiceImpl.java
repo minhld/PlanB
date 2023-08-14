@@ -33,7 +33,7 @@ public class KafkaServiceImpl implements KafkaService {
         CompletableFuture<SendResult<String, String>> future = kafkaTemplate.send(kafkaTopic, msg).completable();
         future.whenComplete((result, ex) -> {
             if (ex == null) {
-                log.debug("Sent message to topic {} with offset {}", kafkaTopic, result);
+                log.info("Sent message to topic {} with offset {}", kafkaTopic, result);
             } else {
                 log.error("Unable to send message {} to topic {} due to error {}", msg, kafkaTopic, ex);
             }
@@ -42,7 +42,7 @@ public class KafkaServiceImpl implements KafkaService {
 
     @KafkaListener(topics = "#{'${spring.kafka.topic}'}", groupId = "#{'${spring.kafka.consumer.group-id}'}")
     public void listener(String message) {
-        log.debug("Received Message: {} in group {}", message, kafkaGroupId);
+        log.info("Received Message: {} in group {}", message, kafkaGroupId);
     }
 
     @SneakyThrows

@@ -30,7 +30,7 @@ public class KafkaProducerConfig {
 
     @Bean
     public KafkaTemplate<String, String> kafkaTemplate() {
-        log.debug("kafka started at {}", kafkaBootstrapServers);
+        log.info("kafka started at {}", kafkaBootstrapServers);
         return new KafkaTemplate<>(producerFactory());
     }
 }
