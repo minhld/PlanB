@@ -11,7 +11,7 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
-      group-id: planBGroup
+      group-id: bGroup
     topic: planb-events
 server:
   port: 8080
